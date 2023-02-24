@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <style>
-
+        <style type="text/css">
+           
         </style>
         <title>
             Pollutant Standards Index (PSI) Dataset
@@ -10,7 +10,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" src="mystyle.css">
     </head>
-    <body style="text-align: center;" id="body">
+    <body style="text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif;background-color: black;color: #f8f2f2;;" id="body">
         <h1>
             Pollutant Standards Index (PSI) Dataset
         </h1>
@@ -49,6 +49,14 @@
             west = row.insertCell().innerHTML = 'WEST'
             central = row.insertCell().innerHTML = 'CENTRAL'
 
+            table.rows[0].cells[1].style.textAlign = 'center';
+            table.rows[0].cells[2].style.textAlign = 'center';
+            table.rows[0].cells[3].style.textAlign = 'center';
+            table.rows[0].cells[4].style.textAlign = 'center';
+            table.rows[0].cells[5].style.textAlign = 'center';
+            table.rows[0].cells[6].style.textAlign = 'center';
+            table.rows[0].cells[7].style.textAlign = 'center';
+
             var row_number = 1;
             for(let i = 0; i < 12; i++){
                 value = readings[keys[i]];
@@ -62,6 +70,17 @@
                 west = row.insertCell().innerHTML = value.west;
                 central = row.insertCell().innerHTML = value.central;
                 console.table(value);
+
+                // if([10].includes(row_number)){
+                //     console.log(row_number)
+                table.rows[row_number].cells[1].style.textAlign = 'center';
+                table.rows[row_number].cells[2].style.textAlign = 'center';
+                table.rows[row_number].cells[3].style.textAlign = 'center';
+                table.rows[row_number].cells[4].style.textAlign = 'center';
+                table.rows[row_number].cells[5].style.textAlign = 'center';
+                table.rows[row_number].cells[6].style.textAlign = 'center';
+                table.rows[row_number].cells[7].style.textAlign = 'center';
+                // }
 
                 row_number++;
             }
